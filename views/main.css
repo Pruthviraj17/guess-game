@@ -1,0 +1,148 @@
+.gradientGreen {
+  background: linear-gradient(to bottom right, #00ff008f, #0080009e);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hintMessage {
+  color: tomato;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.gradientRed {
+  background: linear-gradient(
+    to bottom right,
+    rgba(240, 31, 31, 0.513),
+    rgba(139, 7, 7, 0.87)
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.container .btn {
+  background-color: green;
+  color: white;
+  height: 40px;
+  width: 150px;
+  border-radius: 4px;
+}
+
+.container .label1 {
+  color: #6d7871;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .message {
+  animation: myAnimation 5s forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container input {
+  width: 200px;
+  border-color: red;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.container .btn:hover {
+  cursor: pointer;
+  background-color: rgb(221, 0, 0);
+  color: white;
+}
+
+.container .tryAgain:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+.navbar {
+  background-color: green;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-transform: uppercase;
+  z-index: 10;
+
+  /* Add these properties to make the navbar take full width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.guess-form {
+  margin-top: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .container .label1 {
+    margin-bottom: 20px;
+  }
+
+  .container input {
+    width: 100%;
+  }
+
+  .navbar {
+    font-size: 18px;
+  }
+
+  .container .btn {
+    width: 100%;
+  }
+
+  .container .tryAgain {
+    width: 40%;
+  }
+
+  .container .message {
+    font-size: 18px;
+  }
+
+  .hintMessage {
+    font-size: 15px;
+  }
+}

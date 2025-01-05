@@ -1,0 +1,31 @@
+<%- include('./includes/head.ejs') %>
+<div class="container">
+  <form class="guess-form" action="/guessGame/guessedNumber" method="POST">
+    <label for="number" class="label1">Guess any Number 👇 </label>
+    <input
+      type="number"
+      id="guessedNumber"
+      name="guessedNumber"
+      value="1"
+      min="1"
+      max="10"
+    />
+    <button class="btn" type="submit">Guess</button>
+
+    <h1 class="message">choose any number between 1 and 10.</h1>
+
+    <h2 class="hintMessage">HINT</h2>
+    <script>
+      const hintMessage = document.querySelector(".hintMessage");
+
+      hintMessage.addEventListener("mouseover", () => {
+        hintMessage.textContent = `<%= hint %>`;
+      });
+
+      hintMessage.addEventListener("mouseout", () => {
+        hintMessage.textContent = "HINT";
+      });
+    </script>
+  </form>
+</div>
+<%- include('./includes/end.ejs') %>

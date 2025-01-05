@@ -1,0 +1,15 @@
+<%- include('./includes/head.ejs') %>
+
+<div
+  class="container <%if(message.res){%>gradientGreen<%} else {%>gradientRed<%}%>"
+>
+  <form class="guess-form" action="/guessGame/getNumber/" method="get">
+    <h1 class="message">
+      <% if(message) { %><%= message.message %><%} else {%> Somthing went wrong!
+      try again.<%}%>
+    </h1>
+    <button class="btn tryAgain" type="submit">Try Again</button>
+  </form>
+</div>
+
+<%- include('./includes/end.ejs') %>
