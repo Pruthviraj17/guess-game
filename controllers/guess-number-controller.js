@@ -33,5 +33,7 @@ exports.giveNumber = (req, res, next) => {
 };
 
 exports.dashBoard = (req, res, next) => {
+  console.log();
+
   res.render("dashboard");
 };
